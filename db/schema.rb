@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100906183924) do
+ActiveRecord::Schema.define(:version => 20100906224623) do
+
+  create_table "hackers", :id => false, :force => true do |t|
+    t.string   "uuid",         :limit => 36
+    t.string   "nickname",     :limit => 100
+    t.string   "first_name",   :limit => 100
+    t.string   "last_name",    :limit => 100
+    t.string   "ipv4_address", :limit => 50
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "messages", :id => false, :force => true do |t|
     t.string   "uuid",                   :limit => 36
