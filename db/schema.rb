@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -18,8 +19,8 @@ ActiveRecord::Schema.define(:version => 20100906224623) do
     t.string   "first_name",   :limit => 100
     t.string   "last_name",    :limit => 100
     t.string   "ipv4_address", :limit => 50
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "messages", :id => false, :force => true do |t|
@@ -27,8 +28,8 @@ ActiveRecord::Schema.define(:version => 20100906224623) do
     t.string   "text",                   :limit => 560
     t.string   "hacker_id",              :limit => 36
     t.string   "in_reply_to_message_id", :limit => 36
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
   end
 
   add_index "messages", ["created_at"], :name => "index_messages_on_created_at"

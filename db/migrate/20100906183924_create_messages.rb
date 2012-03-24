@@ -1,6 +1,7 @@
 class CreateMessages < ActiveRecord::Migration
   def self.up
-    create_table :messages, :id => false, :options => "DEFAULT CHARSET=utf8" do |t|
+    #create_table :messages, :id => false, :options => "DEFAULT CHARSET=utf8" do |t|
+    create_table :messages, :id => false do |t|
       t.string :uuid, :limit => 36, :primary => true
       t.string :text, :limit => 560
       t.string :hacker_id, :limit => 36
